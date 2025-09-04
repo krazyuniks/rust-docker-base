@@ -23,7 +23,7 @@ jobs:
         uses: docker/metadata-action@v5.8.0
         with:
           images: |
-            ${{ vars.DOCKER_USERNAME }}/rust-webapp
+            ${{ vars.DOCKER_USERNAME }}/rust-docker-base
           tags: |
             type=raw,value=latest
 
