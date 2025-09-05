@@ -1,3 +1,9 @@
+cargo-features = ["codegen-backend"]
+
+[profile.dev]
+codegen-backend = "cranelift"
+
+
 [package]
 name = "rust-docker-base"
 version = "0.1.0"

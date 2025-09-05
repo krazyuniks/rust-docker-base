@@ -35,4 +35,7 @@ RUN apt-get update -y && export DEBIAN_FRONTEND=noninteractive && \
   cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=c++ -B build && \
   cmake --build build -j$(nproc) && \
   sudo cmake --build build --target install && \
-  cd .. && rm -rf mold
+  cd .. && rm -rf mold && \
+  apt -y purge --auto-remove build-essential libtool && \
+  apt clean && \
+  rm -rf /var/lib/apt /var/lib/dpkg /usr/share/doc/ /usr/share/man* /usr/share/locale* /usr/share/perl
