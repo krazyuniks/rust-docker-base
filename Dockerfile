@@ -2,6 +2,7 @@
 FROM debian:trixie-slim
 
 ENV DOCKER_BUILDKIT=1 \
+  HOME="/home/ryan" \
   PATH="$PATH:/home/ryan/.cargo/bin" \
   RUSTFLAGS="-Z threads=8"
 
