@@ -2,7 +2,7 @@
 FROM debian:trixie-slim
 
 ENV DOCKER_BUILDKIT=1 \
-  HOME="/home/ryan" \
+  HOME=/home/ryan \
   PATH="$PATH:/home/ryan/.cargo/bin" \
   RUSTFLAGS="-Z threads=8"
 
@@ -26,6 +26,7 @@ RUN apt-get update -y && export DEBIAN_FRONTEND=noninteractive && \
   rsync && \
   groupadd -g 1000 ryan && \
   useradd -ms /bin/bash -u 1000 -g 1000 -d /home/ryan -m ryan && \
+  echo insecure > $HOME/.curlrc && \
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain none -y && \
   rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy --component rustc-codegen-cranelift-preview --component rustfmt && \
   cargo install cargo-watch cargo-outdated cargo-update cargo-edit sea-orm-cli && \
