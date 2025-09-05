@@ -4,4 +4,5 @@
 export DOCKER_IP=$(ifconfig | grep 172 | awk '{print $2}')
 
 docker compose down
+docker compose build 
 docker compose up -d
