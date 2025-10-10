@@ -6,7 +6,9 @@ ENV DOCKER_BUILDKIT=1 \
   PATH="$PATH:/home/ryan/.cargo/bin" \
   RUSTFLAGS="-Z threads=8"
 
-ARG RUST_VERSION="nightly-2025-09-27"
+ARG RUST_VERSION="nightly-2025-10-09"
+
+WORKDIR /home/ryan
 
 RUN apt-get update -y && export DEBIAN_FRONTEND=noninteractive && \
   apt dist-upgrade -y && \
