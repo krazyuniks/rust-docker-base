@@ -6,7 +6,7 @@ ENV DOCKER_BUILDKIT=1 \
   PATH="$PATH:/home/ryan/.cargo/bin" \
   RUSTFLAGS="-Z threads=8"
 
-ARG RUST_VERSION="nightly-2025-10-09"
+ARG RUST_VERSION="nightly-2025-10-12"
 
 WORKDIR /home/ryan
 
