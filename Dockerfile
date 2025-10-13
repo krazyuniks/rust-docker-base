@@ -33,7 +33,7 @@ RUN apt-get update -y && export DEBIAN_FRONTEND=noninteractive && \
   echo insecure > $HOME/.curlrc && \
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain none -y && \
   rustup toolchain install ${RUST_VERSION} --allow-downgrade --profile minimal --component clippy --component rustc-codegen-cranelift-preview --component rustfmt && \
-  cargo install cargo-watch cargo-outdated cargo-update cargo-edit sea-orm-cli && \
+  cargo install cargo-watch cargo-outdated cargo-update cargo-edit sea-orm-cli bacon && \
   chown -R ryan:ryan /home/ryan && \
   git clone --branch stable https://github.com/rui314/mold.git && \
   cd mold && \
