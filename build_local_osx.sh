@@ -1,3 +1,3 @@
 #!/bin/bash
 
-httpProxy=http://host.docker.internal:8889 docker build -t rust-docker-base .
+httpProxy=$HTTP_PROXY docker build -t rust-docker-base .

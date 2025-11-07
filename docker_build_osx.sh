@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build --build-arg CARGO_HTTPS_PROXY="http://host.docker.internal:8889" --build-arg https_proxy="http://host.docker.internal:8889" -t rust-docker-base .
+docker build --build-arg CARGO_HTTPS_PROXY=$HTTP_PROXY --build-arg https_proxy="$HTTP_PROXY" -t rust-docker-base .
