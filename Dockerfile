@@ -5,7 +5,7 @@ ENV DOCKER_BUILDKIT=1 \
   HOME=/home/ryan \
   PATH="$PATH:/home/ryan/.cargo/bin"
 
-ARG RUST_VERSION="nightly-2025-11-05"
+ARG RUST_VERSION="nightly-2025-11-07"
 
 WORKDIR /home/ryan
 
